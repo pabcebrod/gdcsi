@@ -28,27 +28,6 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      nodes {
-        title
-        slug
-        publishDate(formatString: "MMMM Do, YYYY")
-        tags
-        heroImage {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            placeholder: BLURRED
-            width: 424
-            height: 212
-          )
-        }
-        description {
-          childMarkdownRemark {
-            html
-          }
-        }
-      }
-    }
     allContentfulPerson(
       filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
     ) {
