@@ -48,10 +48,7 @@ module.exports = {
     "gatsby-plugin-image",
     {
       resolve: "gatsby-source-contentful",
-     options: {
-      spaceId: `987654321`,
-      accessToken: `123456789`,
-    },
+      options: contentfulConfig,
     },
   ],
 };
